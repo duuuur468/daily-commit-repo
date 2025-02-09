@@ -4,8 +4,11 @@ on:
   schedule:
     # Run at 10:30 UTC every day
     - cron: '30 10 * * *'
-  # Allow manual triggering for testing
   workflow_dispatch:
+
+# Add permissions block to allow writing to the repository
+permissions:
+  contents: write
 
 jobs:
   create-commit:
